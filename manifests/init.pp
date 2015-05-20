@@ -35,7 +35,34 @@
 #
 # Copyright 2015 Your name here, unless otherwise noted.
 #
-class icecast {
+class icecast($ensure = "present")
+{
+	unless (defined("icecast::packages"))
+	{
+		class
+		{ "icecast::packages":
+			ensure	=> $ensure,
+		}
 
+		contain "icecast::packages"
+	}
 
-}
+	unless (defined("icecast::config"))
+	{
+		class
+		{ "icecast::config":
+			ensure	=> $ensure,
+		}
+
+		contain "icecast::config"
+	}
+
+	unless (defined("icecast::services"))
+	{
+		class
+		{ "icecast::services":
+			ensure	=> $ensure,
+		}
+
+		contain "icecast::services"
+	}}
