@@ -1,0 +1,14 @@
+{
+  "name": "Callum027-icecast",
+  "version": "0.1.0",
+  "author": "Callum027",
+  "summary": "Icecast Streaming Media Server",
+  "license": "Apache 2.0",
+  "source": "https://github.com/Callum027/puppet-icecast",
+  "project_page": "https://github.com/Callum027/puppet-icecast",
+  "issues_url": "https://github.com/Callum027/puppet-icecast/issues",
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
+  ]
+}
+
